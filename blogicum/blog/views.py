@@ -1,3 +1,4 @@
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render, get_object_or_404, get_list_or_404
 
 from blog.models import Post, Category
@@ -6,7 +7,7 @@ from blog.models import Post, Category
 POSTS_PER_PAGE = 5
 
 
-def index(request):
+def index(request: HttpRequest) -> HttpResponse:
     template = 'blog/index.html'
     posts = (
         Post.published.get_posts_qs()
@@ -15,7 +16,7 @@ def index(request):
     return render(request, template, context)
 
 
-def post_detail(request, id):
+def post_detail(request: HttpRequest, id: int):
     template = 'blog/detail.html'
     post = get_object_or_404(
         Post.objects.base_filters(),
