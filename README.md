@@ -30,6 +30,6 @@
 
 **python manage.py loaddata db.json**
 
-Запутсите проект
+Запустите проект
 
 **python manage.py runserver**
