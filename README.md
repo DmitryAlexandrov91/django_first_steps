@@ -30,9 +30,17 @@
 
 **python manage.py loaddata db.json**
 
+Создайте суперюзера для доступа к админ зоне приложения
+
+**python manage.py createsuperuser**
+
 Запустите проект
 
 **python manage.py runserver**
+
+Проект станет доступен по адресу *http://127.0.0.1:8000/*
+
+Админ зона - *http://127.0.0.1:8000/*
 
 
 ## Автор
