@@ -22,7 +22,7 @@
 
 **cd /blogicum**
 
-Примените миграцию
+Примените миграции
 
 **python manage.py migrate**
 
